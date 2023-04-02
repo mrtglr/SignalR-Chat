@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+}
+
+.msg-style {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.ud-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #191d32;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ud-header h2 {
+    color: #fdffff;
+}
+
+.ud-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 9vh 10% 2vh;
+    padding: 0 10% 0;
+}
+
+.ud-body .msg-box {
+    width: 100%;
+    height: calc(100% - 140px);
+    margin-top: 20px;
+    background-color: #eeeeee;
+    border: 2px solid #c2c2c2;
+    border-radius: 0.5em;
+    padding: 10px 30px;
+    font-size: 14px;
+    overflow: auto;
+}
+
+.ud-body .msg-box ul {
+    list-style: none;
+}
+
+.ud-body .msg-box ul .ex-msg {
+    margin-bottom: 10px;
+    color: #cc6715;
+    text-align: left;
+}
+
+.ud-body .msg-box ul .in-msg {
+    margin-bottom: 10px;
+    color: #222222;
+    text-align: right;
+}
+
+.ud-body .ud-flex-row {
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ud-body .ud-flex-row .msg-input {
+    height: 100%;
+    border-radius: 0.5em;
+    border: 0px solid rgba(0, 0, 0, 0);
+    padding: 10px;
+    flex: 1 1 0;
+    border: 1.5px solid #c2c2c2;
+}
+
+.ud-body .ud-flex-row .msg-input:focus {
+    outline: none;
+    border-color: #c2c2c2;
+    box-shadow: 0 0 5px #c2c2c2;
+}
+
+.ud-body .ud-flex-row .send-btn {
+    height: 100%;
+    width: 100px;
+    border-radius: 0.3em;
+    background-color: #1bd49d;
+    margin-left: 20px;
+    border: 0px solid rgba(0, 0, 0, 0);
+    font-size: 25px;
+    color: #fdffff;
+    position: relative;
+}
+
+.ud-body .ud-flex-row .send-btn:focus {
+    outline: none;
+    border-color: #c2c2c2;
+    box-shadow: 0 0 5px #c2c2c2;
+}
+
+@media screen and (max-width: 500px) {
+    .ud-body .ud-flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 80px;
+    }
+
+    .ud-body .ud-flex-row .msg-input {
+        width: 100%;
+    }
+
+    .ud-body .ud-flex-row .send-btn {
+        margin-left: 0px;
+        font-size: 20px;
+        margin-top: 7px;
+        height: 80%;
+    }
+}
+
+.ud-body .name-box {
+    margin-top: 10px;
+    height: 40px;
+    width: 180px;
+    border-radius: 0.5em;
+    border: 0px solid rgba(0, 0, 0, 0);
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #1bd49d;
+}
+
+.ud-body .name-box:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 500px) {
+    .ud-body {
+        margin: 9vh 5% 2vh;
+        padding: 0 5% 0;
+    }
+
+    .ud-body .msg-box {
+        height: calc(100% - 180px);
+        padding: 10px 10px;
+    }
+}
